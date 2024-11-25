@@ -3,7 +3,7 @@ name: Update Documentation
 # Schedule the workflow to run at 00:00 UTC every day
 on:
   schedule:
-    - cron: '0 5 * * *'  # Adjust the cron expression as needed
+    - cron: '* * * * *'  # Adjust the cron expression as needed
 
 jobs:
   update-docs:
