@@ -1,9 +1,8 @@
 name: Update Documentation
 
-# Schedule the workflow to run at 00:00 UTC every day
 on:
   schedule:
-    - cron: '* * * * *'  # Adjust the cron expression as needed
+    - cron: '*/15 * * * *'
 
 jobs:
   update-docs:
@@ -13,7 +12,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Fetch all history for accurate change detection
+          fetch-depth: 0
 
       - name: Set Up Git
         run: |
