@@ -6,9 +6,9 @@ MIDDEN_NODE_REPO="https://github.com/0xPolygonMiden/miden-node.git"
 MIDDEN_BASE_REPO="https://github.com/0xPolygonMiden/miden-base.git"
 
 # Define the local directories where the docs will be placed
-CLIENT_DIR="miden/miden-client"
-NODE_DIR="miden/miden-node"
-BASE_DIR="miden/miden-base"
+CLIENT_DIR="src/miden-client/"
+NODE_DIR="src/miden-node/"
+BASE_DIR="src/miden-base/"
 
 # Function to clone and copy docs from a repository
 update_docs() {
