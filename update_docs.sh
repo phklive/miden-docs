@@ -45,12 +45,12 @@ update_docs() {
 }
 
 # Update miden-client docs (using default branch)
-update_docs "$MIDDEN_CLIENT_REPO" "$CLIENT_DIR" "phklive-update-docs"
+update_docs "$MIDDEN_CLIENT_REPO" "$CLIENT_DIR"
 
 # Update miden-node docs (using default branch)
 update_docs "$MIDDEN_NODE_REPO" "$NODE_DIR"
 
 # Update miden-base docs (using 'phklive-update-docs' branch)
-update_docs "$MIDDEN_BASE_REPO" "$BASE_DIR" "phklive-update-docs"
+update_docs "$MIDDEN_BASE_REPO" "$BASE_DIR"
 
 echo "All documentation has been updated."
