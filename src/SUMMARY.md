@@ -1,6 +1,6 @@
 # Summary
 
-- [Introduction](miden-base/index.md)
+- [Overview](miden-base/index.md)
 
 # Get started
 
@@ -11,7 +11,31 @@
 
 # How to
 
+- [Write a smart contract]()
+- [Deploy a smart contract]()
+
 # Smart contracts
+
+- [Overview]()
+- [Miden SDK]()
+- [Examples]()
+
+# Node
+
+- [Overview](miden-node/index.md)
+ 
+# Client
+ 
+- [Overview](miden-client/index.md)
+- [Installation](miden-client/install-and-run.md)
+- [Features](miden-client/features.md)
+- [Design](miden-client/design.md)
+- [Library](miden-client/library.md)
+- [CLI]()
+    * [Reference](miden-client/cli-reference.md)
+    * [Config](miden-client/cli-config.md)
+- [Examples](miden-client/examples.md)
+- [API](miden-client/api-docs.md)
 
 # Architecture
 
@@ -29,20 +53,3 @@
     * [Kernel](miden-base/architecture/transactions/kernel.md)
     * [procedures](miden-base/architecture/transactions/procedures.md)
     * [Execution](miden-base/architecture/transactions/execution.md)
-    
-# Node
-
-- [Overview](miden-node/index.md)
-    
-# Client
- 
-- [Overview](miden-client/index.md)
-- [Installation](miden-client/install-and-run.md)
-- [Features](miden-client/features.md)
-- [Design](miden-client/design.md)
-- [Library](miden-client/library.md)
-- [CLI]()
-    * [Reference](miden-client/cli-reference.md)
-    * [Config](miden-client/cli-config.md)
-- [Examples](miden-client/examples.md)
-- [API](miden-client/api-docs.md)
