@@ -1,11 +1,15 @@
+---
+comments: true
+---
+
 In this section, we show you how to create a new local Miden account and how to receive funds from the public Miden faucet website.
 
 ## Configure the Miden client
 
 The Miden client facilitates interaction with the Miden rollup and provides a way to execute and prove transactions.
 
-> **Tip**
-> Check the [Miden client documentation](https://docs.polygon.technology/miden/miden-client/cli-reference/) for more information.
+!!! tip
+      Check the [Miden client documentation](https://docs.polygon.technology/miden/miden-client/cli-reference/) for more information.
 
 1. If you haven't already done so as part of another tutorial, open your terminal and create a new directory to store the Miden client.
 
@@ -19,7 +23,7 @@ The Miden client facilitates interaction with the Miden rollup and provides a wa
       ```shell
       cargo install miden-cli --features testing,concurrent
       ```
-      You can now use the `miden --version` command, and you should see `Miden 0.7.0`.
+      You can now use the `miden --version` command, and you should see `Miden 0.6.0`.
 
 3. Initialize the client. This creates the `miden-client.toml` file.
 
@@ -55,8 +59,8 @@ Save the account ID for a future step.
 
 3. Paste this ID into the **Request test tokens** input field on the faucet website and click **Send Private Note**.
 
-> **Tip**
-> You can also click **Send Public Note**. If you do this, the note's details will be public and you will not need to download and import it, so you can skip to [Sync the client](#sync-the-client).  
+!!! tip
+      You can also click **Send Public Note**. If you do this, the note's details will be public and you will not need to download and import it, so you can skip to [Sync the client](#sync-the-client).  
 
 4. After a few seconds your browser should download - or prompt you to download - a file called `note.mno` (mno = Miden note). It contains the funds the faucet sent to your address.
 
@@ -86,11 +90,11 @@ Save the account ID for a future step.
 
       ![Result of viewing miden notes](../../img/get-started/note-view.png)
 
-> **Tip**: The importance of syncing
-> - As you can see, the note is listed as `Expected`.
-> - This is because you have received a private note but have not yet synced your view of the rollup to check that the note is the result of a valid transaction.
-> - Hence, before consuming the note we will need to update our view of the rollup by syncing.
-> - Many users could have received the same private note, but only one user can consume the note in a transaction that gets verified by the Miden operator.
+!!! tip "The importance of syncing"
+      - As you can see, the note is listed as `Expected`.
+      - This is because you have received a private note but have not yet synced your view of the rollup to check that the note is the result of a valid transaction.
+      - Hence, before consuming the note we will need to update our view of the rollup by syncing.
+      - Many users could have received the same private note, but only one user can consume the note in a transaction that gets verified by the Miden operator.
 
 ### Sync the client
 
@@ -167,8 +171,8 @@ Commited transactions: 0
 
   Amazing! You just have created a client-side zero-knowledge proof locally on your machine and submitted it to the Miden rollup.
 
-> **Tip**
-> You only need to copy the top line of characters of the Note ID.
+!!! tip
+      You only need to copy the top line of characters of the Note ID.
 
 ## View confirmations
 

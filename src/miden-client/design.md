@@ -1,12 +1,16 @@
+---
+comments: true
+---
+
 The Miden client has the following architectural components:
 
 - [Store](#store)
 - [RPC client](#rpc-client)
 - [Transaction executor](#transaction-executor)
 
-> **Important** "Customizable"
-> - The RPC client and the store are Rust traits.
-> - This allow developers and users to easily customize their implementations.
+!!! important "Customizable"
+    - The RPC client and the store are Rust traits.
+    - This allow developers and users to easily customize their implementations.
 
 ## Store
 

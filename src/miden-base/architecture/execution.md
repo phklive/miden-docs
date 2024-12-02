@@ -1,8 +1,14 @@
+---
+comments: true
+---
+
 Polygon Miden is an Ethereum Rollup. It batches transactions - or more precisely, proofs - that occur in the same time period into a block. 
 
 The Miden execution model describes how state progresses on an individual level via transactions and at the global level expressed as aggregated state updates in blocks.
 
+<center>
 ![Architecture core concepts](../img/architecture/execution/execution.png)
+</center>
 
 ## Transaction execution
 
@@ -30,12 +36,14 @@ Batch proofs are aggregated into blocks by the Miden node. The blocks are then s
 
 A block produced by the Miden node looks something like this:
 
-![Architecture core concepts](../img/architecture/execution/block.png)
+<center>
+![Architecture core concepts](../img/architecture/execution/block.png){ width="80%" }
+</center>
 
-> **Tip: Block contents**
-> - **State updates** only contain the hashes of changes. For example, for each updated account, we record a tuple `([account id], [new account hash])`.
-> - **ZK Proof** attests that, given a state commitment from the previous block, there was a sequence of valid transactions executed that resulted in the new state commitment, and the output also included state updates.
-> - The block also contains full account and note data for public accounts and notes. For example, if account `123` is an updated public account which, in the **state updates** section we'd see a records for it as `(123, 0x456..)`. The full new state of this account (which should hash to `0x456..`) would be included in a separate section.
+!!! tip "Block contents"
+      * **state updates** only contain the hashes of changes. For example, for each updated account, we record a tuple `([account id], [new account hash])`.
+      * **ZK Proof** attests that, given a state commitment from the previous block, there was a sequence of valid transactions executed that resulted in the new state commitment, and the output also included state updates.
+      * The block also contains full account and note data for public accounts and notes. For example, if account `123` is an updated public account which, in the **state updates** section we'd see a records for it as `(123, 0x456..)`. The full new state of this account (which should hash to `0x456..`) would be included in a separate section.
 
 ### Verifying valid block state
 
