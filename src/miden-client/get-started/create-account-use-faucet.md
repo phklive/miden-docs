@@ -1,15 +1,11 @@
----
-comments: true
----
-
 In this section, we show you how to create a new local Miden account and how to receive funds from the public Miden faucet website.
 
 ## Configure the Miden client
 
 The Miden client facilitates interaction with the Miden rollup and provides a way to execute and prove transactions.
 
-!!! tip
-      Check the [Miden client documentation](https://docs.polygon.technology/miden/miden-client/cli-reference/) for more information.
+> **Tip**
+> Check the [Miden client documentation](https://0xpolygonmiden.github.io/miden-docs/miden-client/cli-reference.html) for more information.
 
 1. If you haven't already done so as part of another tutorial, open your terminal and create a new directory to store the Miden client.
 
@@ -23,7 +19,7 @@ The Miden client facilitates interaction with the Miden rollup and provides a wa
       ```shell
       cargo install miden-cli --features testing,concurrent
       ```
-      You can now use the `miden --version` command, and you should see `Miden 0.6.0`.
+      You can now use the `miden --version` command, and you should see `Miden 0.7.0`.
 
 3. Initialize the client. This creates the `miden-client.toml` file.
 
@@ -47,7 +43,7 @@ For the --rpc flag, enter the IP that the Miden team supplied.
       ```
       You should see something like this:
 
-      ![Result of listing miden accounts](../../img/get-started/miden-account-list.png)
+      ![Result of listing miden accounts](../img/get-started/miden-account-list.png)
 
 Save the account ID for a future step.
 
@@ -59,8 +55,8 @@ Save the account ID for a future step.
 
 3. Paste this ID into the **Request test tokens** input field on the faucet website and click **Send Private Note**.
 
-!!! tip
-      You can also click **Send Public Note**. If you do this, the note's details will be public and you will not need to download and import it, so you can skip to [Sync the client](#sync-the-client).  
+> **Tip**
+> You can also click **Send Public Note**. If you do this, the note's details will be public and you will not need to download and import it, so you can skip to [Sync the client](#sync-the-client).  
 
 4. After a few seconds your browser should download - or prompt you to download - a file called `note.mno` (mno = Miden note). It contains the funds the faucet sent to your address.
 
@@ -88,13 +84,13 @@ Save the account ID for a future step.
 
 4. You should see something like this:
 
-      ![Result of viewing miden notes](../../img/get-started/note-view.png)
+      ![Result of viewing miden notes](../img/get-started/note-view.png)
 
-!!! tip "The importance of syncing"
-      - As you can see, the note is listed as `Expected`.
-      - This is because you have received a private note but have not yet synced your view of the rollup to check that the note is the result of a valid transaction.
-      - Hence, before consuming the note we will need to update our view of the rollup by syncing.
-      - Many users could have received the same private note, but only one user can consume the note in a transaction that gets verified by the Miden operator.
+> **Tip**: The importance of syncing
+> - As you can see, the note is listed as `Expected`.
+> - This is because you have received a private note but have not yet synced your view of the rollup to check that the note is the result of a valid transaction.
+> - Hence, before consuming the note we will need to update our view of the rollup by syncing.
+> - Many users could have received the same private note, but only one user can consume the note in a transaction that gets verified by the Miden operator.
 
 ### Sync the client
 
@@ -125,7 +121,7 @@ Commited transactions: 0
 
 2. You should see something like this:
 
-      ![Viewing commit height info](../../img/get-started/commit-height.png)
+      ![Viewing commit height info](../img/get-started/commit-height.png)
 
 3. Find your account and note id by listing both `accounts` and `notes`:
 
@@ -142,7 +138,7 @@ Commited transactions: 0
 
 5. You should see a confirmation message like this:
 
-      ![Transaction confirmation message](../../img/get-started/transaction-confirmation.png)
+      ![Transaction confirmation message](../img/get-started/transaction-confirmation.png)
 
 6. After confirming you can view the new note status by running the following command:
 
@@ -152,7 +148,7 @@ Commited transactions: 0
 
 7. You should see something like this:
 
-      ![Viewing process info](../../img/get-started/processing-note.png)
+      ![Viewing process info](../img/get-started/processing-note.png)
 
 8. The note is `Processing`. This means that the proof of the transaction was sent, but there is no network confirmation yet. You can update your view of the rollup by syncing again:
 
@@ -166,13 +162,13 @@ Commited transactions: 0
       miden notes
       ```
 
-      ![Viewing consumed note](../../img/get-started/consumed-note.png)
+      ![Viewing consumed note](../img/get-started/consumed-note.png)
 
 
   Amazing! You just have created a client-side zero-knowledge proof locally on your machine and submitted it to the Miden rollup.
 
-!!! tip
-      You only need to copy the top line of characters of the Note ID.
+> **Tip**
+> You only need to copy the top line of characters of the Note ID.
 
 ## View confirmations
 
@@ -184,7 +180,7 @@ Commited transactions: 0
 
 6. You should now see your accounts vault containing the funds sent by the faucet. 
 
-      ![Viewing account vault with funds](../../img/get-started/view-account-vault.png)
+      ![Viewing account vault with funds](../img/get-started/view-account-vault.png)
 
 ## Congratulations!
 
@@ -192,7 +188,7 @@ You have successfully configured and used the Miden client to interact with a Mi
 
 You have performed basic Miden rollup operations like submitting proofs of transactions, generating and consuming notes.
 
-For more information on the Miden client, refer to the [Miden client documentation](https://docs.polygon.technology/miden/miden-client/).
+For more information on the Miden client, refer to the [Miden client documentation](https://0xpolygonmiden.github.io/miden-docs/miden-client/index.html).
 
 ## Debugging tips (clear state and folder)
 
